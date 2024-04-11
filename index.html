@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <!-- Dodaje tytuł strony -->
+        <title>Pong!</title>
+
+        <!-- Dodaje favicon -->
+        <link rel="icon" type="image/png" href="favicon.png">
+
+        <meta name="description" content="A fun and challenging Pong game with multiple difficulty levels.">
+        <meta name="keywords" content="Pong, game, online, HTML5, JavaScript, difficulty levels">
+
+        <!-- Łącze style -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <!-- Dodaje custom'ową czcionkę -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="startMenu">
+                <h1>Pong!</h1>
+                <button id="startBtn">GRAJ</button>
+                <button id="settingsBtn">USTAWIENIA</button>
+                <button id="tutorialBtn">TUTORIAL</button>
+            </div>
+            <div id="settingsMenu">
+                <h1>Ustawienia</h1>
+                <label for="difficulty">Poziom trudności:</label>
+                <select id="difficulty">
+                    <option value="1">Łatwy</option>
+                    <option value="2">Średni</option>
+                    <option value="3">Trudny</option>
+                </select>
+                <button id="saveSettingsBtn">Zapisz</button>
+            </div>
+            <div id="tutorialMenu">
+                <h1>Tutorial</h1>
+                <p>W Pong, celem gry jest zdobycie punktów, omijając paletkę przeciwnika. <br>Steruj swoją paletką za pomocą strzałek w górę i w dół. Gra kończy się, gdy jeden z graczy zdobędzie 10 punktów.</p>
+                <button id="closeTutorialBtn">Zamknij</button>
+            </div>
+            <div id="pauseMenu">
+                <h1>Gra zatrzymana!</h1>
+                <button id="continueBtn">Kontynuuj</button>
+                <button id="restartBtn">Restart</button>
+            </div>
+            <div id="gameOverMenu">
+                <h1 id="gameMessage"></h1>
+                <button id="againBtn">Spróbuj ponownie</button>
+            </div>
+            <div id="gameplay">
+                <canvas id="gameCanvas" width="800" height="600"></canvas>
+            </div>
+        </div>
+        <!-- Łącze script, który zrobi, żeby gra działała -->
+        <script src="script.js"></script>
+    </body>
+</html>
